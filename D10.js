@@ -644,6 +644,19 @@ tree(5)
   Crea una funzione chiamata "isItPrime" che riceve un numero come parametro e ritorna true se il numero fornito è un numero primo.
 */
 
+
 function isItPrime(n){
-  if(n > 0 && n)
+  for(i=2; i < n; i++){ // uso 2 per capire quali sono i numeri pari che non danno resto
+    if (n <= 1){  //1 non è numero primo
+      return console.log(n + ' non è un numero primo')
+    }if (n % i === 0){
+      return console.log(n + ' non è un numero primo')
+    }else{
+      return console.log(n + ' è un numero primo')
+    }
+  }
 }
+
+isItPrime(17)
+isItPrime(5)
+isItPrime(6)
